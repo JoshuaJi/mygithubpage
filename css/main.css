@@ -1,0 +1,50 @@
+html, body{
+  background: #353536;
+  color: #FFFFFF;
+  height: 100%;
+}
+
+a{
+  color: #FFFFFF;
+}
+
+a:focus{
+  color: #FFFFFF;
+}
+
+a:hover{
+  color: #d9d9d9;
+}
+
+/*.navbar{
+    max-width: 95%;
+}*/
+
+.navbar-right{
+  margin: 20px 0;
+}
+
+.navbar-brand{
+  font-size: 50px;
+  font-weight: 200;
+  margin: 20px 0 0 10px;
+}
+
+.nav-item a:hover{
+  color: #353536;
+}
+
+.title{
+  display: table;
+  min-height:60%;
+  width: 50%;
+  margin: auto;
+}
+
+.title p{
+  display: table-cell;
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 20px;
+  vertical-align: middle;
+}
