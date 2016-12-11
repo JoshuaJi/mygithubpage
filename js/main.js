@@ -1,15 +1,29 @@
-function showPortfolio(){
-  // $(".title").css({"animation-duration":"1s"});
-  // $(".title").addClass("fadeOut hidden");
-  // $("#portfolio").addClass("animated fadeIn");
-  $("#portfolio").removeClass("hidden");
+var trans_speed = 200;
 
-  // setTimeout(function(){
-  //   $(".title").css({"display": "none"});
-  //   $("#portfolio").css({"display":"block"});
-  // },300);
+function showHome(){
+
+  $('#portfolio').fadeOut(trans_speed,function(){
+    $('#home').fadeIn(trans_speed);
+  });
+
+  console.log("home displayed");
+}
+
+function showPortfolio(){
+
+  $('#home').removeClass("animated fadeIn").fadeOut(trans_speed,function(){
+    $('#portfolio').fadeIn(trans_speed);
+  });
+
   console.log("portfolio displayed");
 }
+
+$(document).ready(function(){
+  $('#portfolio').hide();
+  $('#portfolio').css({'display':'block'});
+  $('#portfolio').hide();
+
+});
 
 $(function() {
   $(".nav-item").on("click", function() {

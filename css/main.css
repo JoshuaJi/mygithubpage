@@ -13,36 +13,29 @@ html, body{
 
 }
 
-
-#portfolio h1{
-  font-weight: lighter;
-  position: absolute;
-  height: 120%;
-}
-
 mark{
   color: #353536;
   background-color: #FFFFFF;
   border-radius: 5px;
 }
 
-a, a:hover, a:focus{
+a, a:hover, a:focus, a:active{
   color: #FFFFFF;
 }
 
-.nav li a{
+/* home section */
+
+.nav .navbar li a{
   color: #d9d9d9;
 }
 
-
-
-.nav li a:focus{
+.nav .navbar li a:focus{
   color: #d9d9d9;
   background-color: transparent;
   /*border: 1px solid white;*/
 }
 
-.nav li a:active, .nav li a:hover{
+.nav .navbar li a:active, .nav .navbar li a:hover{
   color: #FFFFFF;
   background-color: transparent;
 }
@@ -73,11 +66,14 @@ a, a:hover, a:focus{
 .navbar-brand{
   font-size: 50px;
   font-weight: 200;
-  /*margin: 20px 0 0 50px;*/
 }
 
 .navbar-nav li{
   display: inline-block;
+}
+
+.navbar-inverse .navbar-brand{
+  color: #FFFFFF;
 }
 
 .nav-item a:hover{
@@ -89,6 +85,8 @@ a, a:hover, a:focus{
   color: #d9d9d9;
   background-color: #353536;
 }
+
+/* description section */
 
 .title{
   padding-top: 15%;
@@ -119,6 +117,24 @@ a, a:hover, a:focus{
 .social-icon ul li a i{
   font-size: 30px;
 }
+
+/* portfolio section */
+
+#portfolio{
+  font-weight: lighter;
+  height: 120%;
+  display: none;
+}
+
+#portfolio h1{
+  font-weight: lighter;
+}
+
+.portfolio-title{
+  padding: 5% 10% 5% 10%
+}
+
+/* responsive section */
 
 @media only screen and (min-width:320px) and (max-width:568px) and (orientation: portrait){
   .container{
