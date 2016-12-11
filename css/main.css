@@ -157,6 +157,16 @@ a, a:hover, a:focus{
   }
 }
 
+.social-icon i{
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.social-icon i:hover{
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 @media only screen and (min-width:375px) and (max-width:760px) and (orientation: portrait){
   .container{
     min-height: 90%;
