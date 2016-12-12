@@ -1,4 +1,7 @@
 var trans_speed = 200;
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});
 
 function showHome(){
 

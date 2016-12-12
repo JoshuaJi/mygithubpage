@@ -6,20 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main_color2.css">
   <script src="https://use.fontawesome.com/5ac54a6903.js"></script>
   <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 
 </head>
 <body>
+
   <div class="container">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header animated bounceInDown">
         <!-- <button type="button" class="navbar-toggle-collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="navbar"> -->
-        <button type="button" class="navbar-toggle">
+        <button type="button" class="navbar-toggle" data-toggle = "collapse" data-target = "#myNavbar">
            <span class="sr-only">Toggle navigation</span>
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
@@ -28,9 +31,7 @@
         <a class="navbar-brand" href="#">XJ</a>
       </div>
 
-
-
-      <div id="myNavbar" class="navbar-collapse collapse animated bounceInDown">
+      <div id="myNavbar" class="collapse navbar-collapse animated bounceInDown">
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item active">
             <a class="nav-link" href="javascript:showHome()">Home</a>
@@ -44,15 +45,19 @@
   </nav>
 
   <div id="home" class="title text-center animated fadeIn">
-    <p>Hi this is <mark><strong>Xu</strong></mark>, A Software Engineering student from McGill University, and a professional photographer</p>
-    <div class="line-separator"></div>
-    <div class="social-icon">
-      <ul class="list-inline">
-        <li><a href="mailto:jixu204@gmail.com" target="_blank"><i class="fa fa-envelope-square"></i></a></li>
-        <li><a href="https://github.com/JoshuaJi" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://500px.com/joshuaji" target="_blank"><i class="fa fa-500px"></i></a></li>
-      </ul>
+    <div class="myDescription">
+      <p>Hi this is <mark><strong>Xu</strong></mark>, A Software Engineering student from McGill University, and a professional photographer</p>
+      <div class="line-separator"></div>
+      <div class="social-icon">
+        <ul class="list-inline">
+          <li><a href="mailto:jixu204@gmail.com" target="_blank"><i class="fa fa-envelope-square"></i></a></li>
+          <li><a href="https://github.com/JoshuaJi" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://500px.com/joshuaji" target="_blank"><i class="fa fa-500px"></i></a></li>
+        </ul>
+      </div>
     </div>
+    <div id="particles-js" class="fadeIn"></div>
+
   </div>
 
   <div id="portfolio" class="container">
@@ -73,7 +78,6 @@
   </div>
 
   </div>
-
 
 
 </body>
