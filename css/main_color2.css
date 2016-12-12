@@ -84,6 +84,10 @@ a, a:hover, a:focus, a:active{
   border-color: #5d5d5d;
 }
 
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:active, .navbar-inverse .navbar-toggle:focus{
+  background-color: transparent;
+}
+
 .navbar-header{
   text-align: center;
   vertical-align: middle;
