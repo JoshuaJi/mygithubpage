@@ -144,7 +144,32 @@ a, a:hover, a:focus, a:active{
 }
 
 .social-icon ul li a i{
-  font-size: 30px;
+  font-size: 40px;
+}
+
+.social-icon .icon-name{
+  margin: 5px 0 0 0 ;
+  font-size: 10px;
+  font-weight: normal;
+  display: none;
+}
+
+.social-icon-item{
+  vertical-align: top;
+}
+
+.social-icon-item:hover .icon-name{
+  display: block;
+}
+
+.social-icon i{
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.social-icon i:hover{
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 /* portfolio section */
@@ -203,15 +228,7 @@ a, a:hover, a:focus, a:active{
   }
 }
 
-.social-icon i{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-          transition:         transform .8s ease-in-out;
-}
 
-.social-icon i:hover{
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
 
 @media only screen and (min-width:375px) and (max-width:760px) and (orientation: portrait){
   .container{
