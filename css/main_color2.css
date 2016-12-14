@@ -204,7 +204,7 @@ a, a:hover, a:focus, a:active{
 /* portfolio section */
 
 #portfolio{
-  padding: 10% 5% 10% 5%;
+  padding: 5% 5% 10% 5%;
   font-weight: lighter;
   height: 120%;
   display: none;
@@ -295,6 +295,9 @@ a, a:hover, a:focus, a:active{
   .social-icon-item:hover .icon-name{
     display: none;
   }
+  #portfolio{
+    padding-top: 10%;
+  }
   .portfolio-thumbnail-img{
     -webkit-filter: saturate(1);
     filter: saturate(1);
@@ -354,6 +357,9 @@ a, a:hover, a:focus, a:active{
   .social-icon-item:hover .icon-name{
     display: none;
   }
+  #portfolio{
+    padding-top: 10%;
+  }
   .portfolio-thumbnail-img{
     -webkit-filter: saturate(1);
     filter: saturate(1);
@@ -401,6 +407,9 @@ a, a:hover, a:focus, a:active{
 
   .social-icon .icon-name{
     display: block;
+  }
+  #portfolio{
+    padding-top: 10%;
   }
   .portfolio-thumbnail-img{
     -webkit-filter: saturate(1);
