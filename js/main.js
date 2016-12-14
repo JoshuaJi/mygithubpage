@@ -8,16 +8,15 @@ function showHome(){
   $('#portfolio').fadeOut(trans_speed,function(){
     $('#home').fadeIn(trans_speed);
   });
-
+  app.clearProject();
   console.log("home displayed");
 }
 
 function showPortfolio(){
-
+  app.clearProject();
   $('#home').removeClass("animated fadeIn").fadeOut(trans_speed,function(){
     $('#portfolio').fadeIn(trans_speed);
   });
-
   console.log("portfolio displayed");
 }
 
