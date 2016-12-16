@@ -3,29 +3,22 @@ particlesJS.load('particles-js', 'particles.json', function() {
   console.log('particles.js loaded - callback');
 });
 
-function showHome(){
 
-  $('#portfolio').fadeOut(trans_speed,function(){
-    $('#home').fadeIn(trans_speed);
-  });
-  app.clearProject();
-  console.log("home displayed");
+function showHome(){
+  $('#home').siblings('div').addClass('animate-out');
+  setTimeout(function(){
+    $('#home').siblings('div').removeClass('animate-out isActive');
+    $('#home').addClass('isActive');
+  }, 300);
 }
 
 function showPortfolio(){
-  app.clearProject();
-  $('#home').removeClass("animated fadeIn").fadeOut(trans_speed,function(){
-    $('#portfolio').fadeIn(trans_speed);
-  });
-  console.log("portfolio displayed");
+  $('#portfolio').siblings('div').addClass('animate-out');
+  setTimeout(function(){
+    $('#portfolio').siblings('div').removeClass('animate-out isActive');
+    $('#portfolio').addClass('isActive');
+  }, 300);
 }
-
-$(document).ready(function(){
-  $('#portfolio').hide();
-  $('#portfolio').css({'display':'block'});
-  $('#portfolio').hide();
-
-});
 
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') ) {

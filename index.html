@@ -49,8 +49,9 @@
       </div>
     </nav>
 
-    <div id="home" class="title text-center animated fadeIn">
-      <div class="myDescription">
+    <div id="home" class="title isActive text-center animated fadeIn container">
+      <div class="row">
+      <div class="myDescription col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
         <p>Hi this is <mark><strong>Xu</strong></mark>, A Software Engineering student from McGill University, and a professional photographer</p>
         <div class="line-separator"></div>
         <div class="social-icon">
@@ -61,13 +62,12 @@
           </ul>
         </div>
       </div>
+      </div>
       <div id="particles-js" class="fadeIn"></div>
 
     </div>
 
-    <transition name="slide-fade" mode="out-in">
 
-      <div v-show="!singleProject">
         <div id="portfolio" class="container">
 
           <!-- search bar -->
@@ -85,8 +85,8 @@
             <div class="col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2 col-xs-10 col-xs-offset-1">
               <div class="row">
                 <div v-for="project in filteredProjects">
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-thumbnail">
-                    <a v-on:click="displayProject(project.title)">
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-thumbnail animated fadeInUp">
+                    <a >
                       <img v-bind:src="project.image" class="portfolio-thumbnail-img">
                     </a>
                     <p class="text-center">{{ project.title }}</p>
@@ -97,14 +97,12 @@
           </div>
 
         </div>
-      </div>
-    </transition>
 
 
-      <div class="single-project-display container" v-show="singleProject">
+      <div class="single-project-display container">
         <div class="row">
           <div class="col-sm-4 col-sm-offset-4 text-center">
-            <h4> {{ singleProject }} </h4>
+            <h4> current-project: {{ singleProject }} </h4>
             <button class="btn btn-info" v-on:click="clearProject">back</button>
           </div>
         </div>

@@ -6,10 +6,19 @@ html, body{
   padding-bottom: 20px;
 }
 
+#app{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
 .container{
   width: auto;
   margin: 0px 20px;
-  min-height: 60%;
 
 }
 
@@ -23,6 +32,16 @@ html, body{
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+.animate-out{
+  animation: out 300ms ease-in-out forwards;
+  animation-duration: 300ms;
+}
+
+@keyframes out {
+  0% {opacity: 1}
+  100% {opacity: 0}
 }
 
 .myDescription{
@@ -144,16 +163,24 @@ a, a:hover, a:focus, a:active{
 
 /* description section */
 
+#home{
+  position: absolute;
+  left: 0;
+  display: none;
+}
+
+#home.isActive{
+  display: block;
+}
+
 .title{
   padding-top: 15%;
   padding-bottom: 15%;
-  min-height:100%;
-  width: 50%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation-duration: 3s;
+  /*animation-duration: 3s;*/
 }
 
 .title p{
@@ -206,8 +233,14 @@ a, a:hover, a:focus, a:active{
 #portfolio{
   padding: 5% 5% 10% 5%;
   font-weight: lighter;
-  height: 120%;
+  position: absolute;
+  top: 6vh;
+  left: 0;
   display: none;
+}
+
+#portfolio.isActive{
+  display: block;
 }
 
 #portfolio h1{
@@ -262,8 +295,8 @@ a, a:hover, a:focus, a:active{
   display: block;
   -webkit-filter: saturate(0.2);
   filter: saturate(0.2);
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
 }
 
 .portfolio-thumbnail-img:hover{
@@ -272,24 +305,25 @@ a, a:hover, a:focus, a:active{
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 
-.slide-fade-enter-active {
-  transition: all .3s ease;
+/* single project display */
+.single-project-display{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10vh;
+  display: none;
 }
-.slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+
+.single-project-display.isActive{
+  display: block;
 }
-.slide-fade-enter, .slide-fade-leave-active {
-  transform: translateX(-20px);
-  opacity: 0;
-}
+
 
 
 /* responsive section */
 
 @media only screen and (min-width:320px) and (max-width:568px) and (orientation: portrait){
-  .container{
-    min-height: 90%;
-  }
+
   .navbar{
     padding: 20px 15px 0px 15px
   }
@@ -298,8 +332,7 @@ a, a:hover, a:focus, a:active{
     font-weight: 200;
   }
   .title{
-    width: 80%;
-    padding-top: 30%;
+    /*padding-top: 30%;*/
   }
   .title p{
     font-size: 20px;
@@ -325,16 +358,13 @@ a, a:hover, a:focus, a:active{
   .navbar{
     margin-bottom: 0px;
   }
-  .container{
-    min-height: 90%;
-  }
+
   .navbar-brand{
     font-size: 30px;
     font-weight: 200;
   }
   .title{
-    width: 80%;
-    padding-top:0;
+    /*padding-top:0;*/
   }
 
   .title p{
@@ -354,12 +384,9 @@ a, a:hover, a:focus, a:active{
 
 
 @media only screen and (min-width:375px) and (max-width:760px) and (orientation: portrait){
-  .container{
-    min-height: 90%;
-  }
+
   .title{
-    width: 80%;
-    padding-top: 25%;
+    /*padding-top: 25%;*/
   }
 
   .title p{
@@ -381,12 +408,9 @@ a, a:hover, a:focus, a:active{
 }
 
 @media only screen and (min-width:375px) and (max-width:760px) and (orientation: landscape){
-  .container{
-    min-height: 90%;
-  }
+
   .title{
-    width: 80%;
-    padding-top: 10%;
+    /*padding-top: 10%;*/
   }
 
   .title p{
@@ -405,12 +429,9 @@ a, a:hover, a:focus, a:active{
 }
 
 @media only screen and (min-width:760px) and (max-width:1024px) and (orientation: portrait){
-  .container{
-    min-height: 90%;
-  }
+
   .title{
-    width: 80%;
-    padding-top: 40%;
+    /*padding-top: 40%;*/
   }
 
   .title p{
@@ -432,12 +453,9 @@ a, a:hover, a:focus, a:active{
 }
 
 @media only screen and (min-width:760px) and (max-width:1024px) and (orientation: landscape){
-  .container{
-    min-height: 90%;
-  }
+
   .title{
-    width: 80%;
-    padding-top: 25%;
+    /*padding-top: 25%;*/
   }
 
   .title p{
