@@ -167,8 +167,6 @@ a, a:hover, a:focus, a:active{
 /* description section */
 
 #home{
-  left: 0;
-  top: 8vh;
   display: none;
 }
 
@@ -206,7 +204,8 @@ a, a:hover, a:focus, a:active{
   font-size: 10px;
   max-width: 30px;
   font-weight: normal;
-  display: none;
+  display: block;
+  visibility: hidden;
 }
 
 .social-icon-item{
@@ -214,7 +213,7 @@ a, a:hover, a:focus, a:active{
 }
 
 .social-icon-item:hover .icon-name{
-  display: block;
+  visibility: visible;
 }
 
 .social-icon i{
