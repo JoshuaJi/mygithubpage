@@ -164,7 +164,6 @@ a, a:hover, a:focus, a:active{
 /* description section */
 
 #home{
-  position: absolute;
   left: 0;
   top: 8vh;
   display: none;
@@ -230,7 +229,6 @@ a, a:hover, a:focus, a:active{
 #portfolio{
   padding: 5% 5% 10% 5%;
   font-weight: lighter;
-  position: absolute;
   top: 6vh;
   left: 0;
   display: none;
@@ -304,7 +302,6 @@ a, a:hover, a:focus, a:active{
 
 /* single project display */
 .single-project-display{
-  position: absolute;
   left: 0;
   right: 0;
   top: 10vh;
