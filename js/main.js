@@ -1,23 +1,22 @@
-var trans_speed = 200;
 particlesJS.load('particles-js', 'particles.json', function() {
   console.log('particles.js loaded - callback');
 });
 
 
 function showHome(){
-  $('#home').siblings('div').addClass('animate-out');
+  $('#home').siblings('div').addClass('animated fadeOut');
   setTimeout(function(){
-    $('#home').siblings('div').removeClass('animate-out isActive');
-    $('#home').addClass('isActive');
-  }, 300);
+    $('#home').siblings('div').removeClass('animated fadeOut isActive');
+    $('#home').addClass('animated fadeIn isActive');
+  }, 500);
 }
 
 function showPortfolio(){
-  $('#portfolio').siblings('div').addClass('animate-out');
+  $('#portfolio').siblings('div').addClass('animated fadeOut');
   setTimeout(function(){
-    $('#portfolio').siblings('div').removeClass('animate-out isActive');
-    $('#portfolio').addClass('isActive');
-  }, 300);
+    $('#portfolio').siblings('div').removeClass('animated fadeOut isActive');
+    $('#portfolio').addClass('animated fadeIn isActive');
+  }, 500);
 }
 
 $(document).on('click','.navbar-collapse.in',function(e) {

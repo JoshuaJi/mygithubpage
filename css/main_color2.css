@@ -6,6 +6,10 @@ html, body{
   padding-bottom: 20px;
 }
 
+.animated {
+  animation-duration: 500ms;
+}
+
 #app{
   display: -webkit-flex;
   display: flex;
@@ -36,7 +40,6 @@ html, body{
 
 .animate-out{
   animation: out 300ms ease-in-out forwards;
-  animation-duration: 300ms;
 }
 
 @keyframes out {
