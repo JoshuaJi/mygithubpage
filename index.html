@@ -13,6 +13,7 @@
   <script src="js/particles.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <title>Xu Ji</title>
 
 </head>
 <body>
@@ -86,7 +87,7 @@
               <div class="row">
                 <div v-for="project in filteredProjects">
                   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-thumbnail animated fadeInUp">
-                    <a >
+                    <a v-on:click="showProject(project.id)">
                       <img v-bind:src="project.image" class="portfolio-thumbnail-img">
                     </a>
                     <p class="text-center">{{ project.title }}</p>
@@ -99,14 +100,16 @@
         </div>
 
 
+<div class="project-section-wrapper">
       <div class="single-project-display container">
+        <button class="btn btn-info" v-on:click="clearProject">back</button>
         <div class="row">
-          <div class="col-sm-4 col-sm-offset-4 text-center">
-            <h4> current-project: {{ singleProject }} </h4>
-            <button class="btn btn-info" v-on:click="clearProject">back</button>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="loadPosition"></div>
           </div>
         </div>
       </div>
+    </div>
 
   </div>
 
