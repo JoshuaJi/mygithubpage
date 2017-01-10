@@ -5,7 +5,8 @@ var app = new Vue({
       id: 1,
       title: 'Home automation project',
       image: 'img/project1_feature.png',
-      bgColor: '#fff5cc'
+      // bgColor: '#fff5cc'
+      bgColor: '#e1e1e1'
     },{
       id: 2,
       title: 'project 2',
@@ -45,16 +46,16 @@ var app = new Vue({
     showProject: function(id){
       console.log(id);
       $('.single-project-display .loadPosition').load('blogpost'+id+'.html');
-      $('.single-project-display').css('background', this.projects[id-1].bgColor);
+      $('.project-section-wrapper').css('background', this.projects[id-1].bgColor);
 
       $('#portfolio').animate({left:"-30px"}, 300);
-      $('.single-project-display').animate({left:"90px"}, 300);
+      $('.project-section-wrapper').animate({left:"5%"}, 300);
     },
 
     clearProject: function(){
       this.singleProject = '';
       $('#portfolio').animate({left:"0"}, 300);
-      $('.single-project-display').animate({left:"100%"}, 300, function(){
+      $('.project-section-wrapper').animate({left:"100%"}, 300, function(){
         $('.single-project-display .loadPosition').html('');
       });
 

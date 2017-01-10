@@ -311,13 +311,8 @@ a, a:hover, a:focus, a:active{
 /* single project display */
 
 .project-section-wrapper{
-    overflow: hidden;
-}
-
-.single-project-display{
-  /*left: 80%;*/
   position: fixed;
-  overflow: scroll;
+  overflow: hidden;
   top: 0;
   bottom: 0;
   left: 100%;
@@ -325,9 +320,20 @@ a, a:hover, a:focus, a:active{
   width: 100%;
   margin-right: 0;
   height: auto;
-  background: #9BD475;
   display: block;
   z-index: 2000;
+
+}
+
+.single-project-display{
+  /*left: 80%;*/
+  /*position: relative;*/
+  overflow: scroll;
+  height: 100%;
+  width: 95%;
+  margin-left: 0;
+  padding-left: 10%;
+  padding-right: 5%;
 }
 
 .single-project-display.isActive{
@@ -340,8 +346,12 @@ a, a:hover, a:focus, a:active{
 
 .single-project-display button{
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 5%;
+  top: 2.5%;
+  width: 95vh;
+  z-index: 2500;
+  transform-origin: left top 0;
+  transform:rotate(90deg);
 }
 
 
@@ -375,6 +385,11 @@ a, a:hover, a:focus, a:active{
     filter: saturate(1);
     -webkit-transition: all .5s ease-in-out;
             transition: all .5s ease-in-out;
+  }
+
+  .single-project-display button{
+    padding: 0;
+    left: 6%;
   }
 }
 
@@ -433,6 +448,11 @@ a, a:hover, a:focus, a:active{
     filter: saturate(1);
     -webkit-transition: all .5s ease-in-out;
             transition: all .5s ease-in-out;
+  }
+
+  .single-project-display button{
+    padding: 0;
+    left: 6%;
   }
 }
 
