@@ -14,20 +14,9 @@ var app = new Vue({
       address: 'sentiment.html'
     },{
       id: 3,
-      title: 'project 3',
-      image: 'img/section1.jpg'
-    },{
-      id: 4,
-      title: 'project 4',
-      image: 'img/section2.jpg'
-    },{
-      id: 5,
-      title: 'project 5',
-      image: 'img/section1.jpg'
-    },{
-      id: 6,
-      title: 'project 6',
-      image: 'img/section2.jpg'
+      title: 'EV3 Autonomous Car',
+      image: 'img/autonomous_feature.JPG',
+      address: 'autonomous_car.html'
     }],
 
     liveFilter : '',
