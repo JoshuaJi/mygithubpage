@@ -1,0 +1,73 @@
+
+<div>
+  <style>
+    .userInput{
+      background-color: #e6e6e6;
+      border-color: #9d9d9d;
+      border-radius: 20px;
+      height: 30px;
+      width: 100%;
+      padding: 0px 10px;
+    }
+    .userInput:focus{
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(157,157,157,.8);
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(157,157,157,.8);
+      outline: none;
+    }
+    .textField{
+      margin-top:10%;
+    }
+    .discription{
+      margin-top: 8%;
+    }
+    .discription p{
+      font-weight: 300;
+    }
+  </style>
+
+  <h1 style="margin-bottom:10%; font-weight: 300">Sentiment Analysis</h1>
+
+  <h4 style=" font-weight: 200">role:      <strong>frontend / backend</strong></h4>
+  <h4 style=" font-weight: 200">languages: <strong>javascript / jQuery / css</strong></h4>
+
+  <div class="inner-addon right-addon textField">
+    <input type="text" class="userInput" placeholder="Type your sentance">
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-4">
+      <div class="discription">
+        <p>This piece of javascript is going to determine if your text entered above is positive or negative. If positive, the background color will turn to yellow, if not, blue.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var allData = '';
+  jQuery.get('src/AFINN-111.json',function(data){
+    allData = data;
+  });
+
+  $(".userInput").keyup( function(){
+    handleUserInput($(this).val());
+  })
+
+  function handleUserInput(userText){
+    var inputArray = userText.split(" ");
+    var score = 0;
+    for (var index in inputArray){
+      var word = inputArray[index];
+      if (allData[word]) {
+        score += parseInt(allData[word]);
+      }
+    }
+    if (score == 0){
+      $('.project-section-wrapper').css('background', '#e1e1e1');
+    }else if (score > 0) {
+      $('.project-section-wrapper').css('background', '#FEFFCD');
+    }else if(score < 0){
+      $('.project-section-wrapper').css('background', '#CEDFFC');
+    }
+  }
+  </script>
+</div>

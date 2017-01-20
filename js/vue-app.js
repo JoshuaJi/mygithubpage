@@ -3,14 +3,15 @@ var app = new Vue({
   data: {
     projects: [{
       id: 1,
-      title: 'Home automation project',
+      title: 'Home Automation project',
       image: 'img/project1_feature.png',
       // bgColor: '#fff5cc'
-      bgColor: '#e1e1e1'
+      address: 'blogpost1.html'
     },{
       id: 2,
-      title: 'project 2',
-      image: 'img/section2.jpg'
+      title: 'Sentiment Analysis',
+      image: 'img/project2_feature.jpg',
+      address: 'sentiment.html'
     },{
       id: 3,
       title: 'project 3',
@@ -45,8 +46,8 @@ var app = new Vue({
 
     showProject: function(id){
       console.log(id);
-      $('.single-project-display .loadPosition').load('blogpost'+id+'.html');
-      $('.project-section-wrapper').css('background', this.projects[id-1].bgColor);
+      $('.single-project-display .loadPosition').load(this.projects[id-1].address);
+      $('.project-section-wrapper').css('background', this.projects[id-1].bgColor || '#e1e1e1');
 
       $('#portfolio').animate({left:"-30px"}, 300);
       $('.project-section-wrapper').animate({left:"5%"}, 300);
